@@ -146,16 +146,41 @@
           </p>
 
           <p>
-            この差分が積分の$\delta q$と$\delta \dot{q}$で拡張されるとき、導いている条件は一つ目の順序である。極小値<sup><a href="#minimum">4</a></sup>
+            この差分が積分の$\delta q$と$\delta \dot{q}$で拡張されるとき、導いている項は一つ目の順序である。極小値<sup><a href="#minimum">4</a></sup>
             を持つための$S$の必要条件は（積分の<b>第一変分</b>、もしくは<b>変分</b>と呼ばれる）これらの条件が0であること。したがって最小原理の法則は公式
             $$
             \tag{2.4} \delta S = \delta \int_{t_1}^{t_2}L(q, \dot{q}, t)dt = 0
             $$
             もしくは、変分をして、
             $$
-            \int_{t_1}^{t_2}\bigg(\frac{\delta L}{\delta q}\delta q + \frac{\delta L}{\delta \dot{q}}\delta \dot{q}\bigg)dt = 0
+            \int_{t_1}^{t_2}\bigg(\frac{\partial L}{\partial q}\delta q + \frac{\partial L}{\partial \dot{q}}\delta \dot{q}\bigg)dt = 0
             $$
             で書かれる。
+          </p>
+
+          <p>
+            $\delta \dot{q} = d\delta q/dt$なので、2番目の項を積分することで、
+            $$
+            \tag{2.5} \delta S = \bigg[\frac{\partial L}{\partial q}\delta q\bigg]_{t_1}^{t_2} + \int_{t_1}^{t_2}\bigg(\frac{\partial L}{\partial q} - \frac{d}{dt}\frac{\partial L}{\partial \dot{q}}\bigg) \delta q dt = 0
+            $$
+            を得る。
+          </p>
+
+          <p>
+            条件$(2.3)$は$(2.5)$の積分した項が0であることを示す。$\delta q$の全ての値を消す積分を残す。もし積分が0なら、することができる。したがって
+            $$
+            \frac{d}{dt}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0
+            $$
+            を持つ。
+          </p>
+
+          <p>
+            系が一つ以上の自由度を持つとき、$s$個の異なる関数$q_i(t)$は最小作用の法則で独自に変化される。
+            公式
+            $$
+            \tag{2.6} \frac{d}{dt}\bigg(\frac{\partial L}{\partial \dot{q}_i}\bigg) - \frac{\partial L}{\partial q_i} = 0　(i = 1,2,...,s)
+            $$
+            の$s$個の等式を明らかに得る。
           </p>
 
           <!-- <p></p> -->
